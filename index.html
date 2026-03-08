@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>공고 통합 대시보드</title>
+
+<style>
+body{
+font-family:Malgun Gothic;
+background:#f6f7fb;
+padding:30px;
+}
+
+h1{
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+th,td{
+padding:12px;
+border-bottom:1px solid #ddd;
+}
+
+th{
+background:#f0f0f0;
+}
+</style>
+</head>
+
+<body>
+
+<h1>공고 통합 대시보드</h1>
+
+<table>
+<thead>
+<tr>
+<th>기관</th>
+<th>공고 제목</th>
+<th>날짜</th>
+</tr>
+</thead>
+
+<tbody id="feedBody"></tbody>
+
+</table>
+
+<script>
+
+async function load(){
+
+const res = await fetch("./feed.json");
+const data = await res.json();
+
+const items = data.items || [];
+
+document.getElementById("feedBody").innerHTML =
+items.map(i=>`
+
+<tr>
+<td>${i.source_name}</td>
+<td>
+<a href="${i.url}" target="_blank">
+${i.title}
+</a>
+</td>
+<td>${i.notice_date || "-"}</td>
+</tr>
+
+`).join("");
+
+}
+
+load();
+
+</script>
+
+</body>
+</html>
