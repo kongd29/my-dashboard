@@ -14,48 +14,41 @@ const KEYWORDS = [
   "판로", "마케팅", "컨설팅", "교육", "자금", "융자", "보조", "지원사업"
 ];
 
-// 🚀 [핵심 수정] 15개 기관의 실제 작동하는 최신 URL로 전면 교체
-const SITES = [
-      { id: "mss_incheon",  name: "인천중소벤처기업청",       url: "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246" },
-      { id: "kosmes",       name: "중소벤처기업진흥공단",     url: "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsId=114" },
-      { id: "smr",          name: "성남산업진흥원",           url: "https://www.snip.or.kr/portal/snip/MainMenu/businessManagement/application.page" },
-      { id: "gmr",          name: "경기도시장상권진흥원",     url: "https://www.gmr.or.kr/gmr/board/1/board.do" },
-      { id: "bizok",        name: "비즈OK(인천)",             url: "https://bizok.incheon.go.kr/open_content/support/application.jsp" },
-      { id: "wbiz",         name: "여성기업종합정보포털",     url: "https://www.wbiz.or.kr/web/board/boardList.do?boardId=10" },
-      { id: "semas",        name: "소상공인시장진흥공단",     url: "https://www.semas.or.kr/web/board/webBoardList.do?boardId=30" },
-      { id: "insupport",    name: "인천소상공인지원센터",     url: "https://www.insupport.or.kr/sub/sub03_02.php" },
-      { id: "nhn_commerce", name: "NHN 커머스",               url: "https://www.nhn-commerce.com/customer-center/notice" },
-      { id: "gobiz",        name: "고비즈코리아",             url: "https://kr.gobizkorea.com/customer/notice/noticeList.do" },
-      { id: "fanfandaero",  name: "판판대로",                 url: "https://fanfandaero.kr/portal/brd/boardList.do?brdId=1" },
-      { id: "sbiz24",       name: "소상공인24",               url: "https://www.sbiz24.kr/#/combinePblanc" },
-      { id: "kodma",        name: "한국소상공인기업총연합회", url: "https://www.kodma.or.kr/bbs/list.do?&bbs_cd=notice" },
-      { id: "ymf_notice",   name: "전통시장육성재단(공지)",   url: "https://www.ymf.or.kr/sub/sub03_03.php" },
-      { id: "ymf_related",  name: "전통시장육성재단(유관)",   url: "https://www.ymf.or.kr/sub/sub03_05.php" }
-    ];
+const SOURCES = [
+  { id: "mss_incheon",  name: "인천중소벤처기업청",       url: "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246", mode: "auto" },
+  { id: "kosmes",       name: "중소벤처기업진흥공단",     url: "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsId=114", mode: "auto" },
+  { id: "smr",          name: "성남산업진흥원",           url: "https://www.snip.or.kr/portal/snip/MainMenu/businessManagement/application.page", mode: "browser" },
+  { id: "gmr",          name: "경기도시장상권진흥원",     url: "https://www.gmr.or.kr/gmr/board/1/board.do", mode: "auto" },
+  { id: "bizok",        name: "비즈오케이(인천)",         url: "https://bizok.incheon.go.kr/open_content/support/application.jsp", mode: "browser" },
+  { id: "wbiz",         name: "여성기업종합정보포털",     url: "https://www.wbiz.or.kr/web/board/boardList.do?boardId=10", mode: "auto" },
+  { id: "semas",        name: "소상공인시장진흥공단",     url: "https://www.semas.or.kr/web/board/webBoardList.do?boardId=30", mode: "browser" },
+  { id: "insupport",    name: "인천소상공인지원센터",     url: "https://www.insupport.or.kr/sub/sub03_02.php", mode: "auto" },
+  { id: "nhn_commerce", name: "NHN커머스",               url: "https://www.nhn-commerce.com/customer-center/notice", mode: "browser" },
+  { id: "gobiz",        name: "고비즈",                   url: "https://kr.gobizkorea.com/customer/notice/noticeList.do", mode: "browser" },
+  { id: "fanfandaero",  name: "판판대로",                 url: "https://fanfandaero.kr/portal/brd/boardList.do?brdId=1", mode: "browser" },
+  { id: "sbiz24",       name: "소상공인24",               url: "https://www.sbiz24.kr/#/combinePblanc", mode: "browser" },
+  { id: "kodma",        name: "한국소상공인기업총연합회", url: "https://www.kodma.or.kr/bbs/list.do?&bbs_cd=notice", mode: "auto" },
+  { id: "ymf_notice",   name: "전통시장육성재단(공지)",   url: "https://www.ymf.or.kr/sub/sub03_03.php", mode: "auto" },
+  { id: "ymf_related",  name: "전통시장육성재단(유관)",   url: "https://www.ymf.or.kr/sub/sub03_05.php", mode: "auto" },
+];
+
 const MAX_ITEMS_PER_SOURCE = 30;
 const SITE_WATCHDOG_MS = 60_000;
 
-function ensureDir(p) {
-  if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
-}
+function ensureDir(p) { if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true }); }
 function ts() { return new Date().toISOString().replace(/[:.]/g, "-"); }
 function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
 function normalizeForScan(s) { return String(s || "").replace(/\s+/g, " ").trim(); }
 function saveEvidence(id, reason, content) {
-  const dir = path.join(process.cwd(), "evidence");
-  ensureDir(dir);
+  const dir = path.join(process.cwd(), "evidence"); ensureDir(dir);
   const file = path.join(dir, `${id}_${reason}_${ts()}.html`);
-  fs.writeFileSync(file, content || "", "utf-8");
-  return file;
+  fs.writeFileSync(file, content || "", "utf-8"); return file;
 }
 
 async function withWatchdog(promise, ms, label) {
   let t;
-  const timeoutPromise = new Promise((_, rej) => {
-    t = setTimeout(() => rej(new Error(`watchdog_timeout:${label}:${ms}ms`)), ms);
-  });
-  try { return await Promise.race([promise, timeoutPromise]); } 
-  finally { clearTimeout(t); }
+  const timeoutPromise = new Promise((_, rej) => { t = setTimeout(() => rej(new Error(`watchdog_timeout:${label}:${ms}ms`)), ms); });
+  try { return await Promise.race([promise, timeoutPromise]); } finally { clearTimeout(t); }
 }
 
 function detectGate(html) {
@@ -65,8 +58,14 @@ function detectGate(html) {
   return { gated: false, reason: null };
 }
 
+// 🚀 [수정 포인트 1] URL 정규화 시 about:blank 방지 로직 추가
 function normalizeUrl(baseUrl, href) {
-  try { return new URL(href, baseUrl).toString(); } catch { return href; }
+  if (!href) return baseUrl;
+  // 자바스크립트 링크나 앵커 태그인 경우 오류 방지를 위해 원본 게시판 주소 반환
+  if (href === "#" || href.toLowerCase().includes("javascript")) {
+    return baseUrl; 
+  }
+  try { return new URL(href, baseUrl).toString(); } catch { return baseUrl; }
 }
 
 function guessDate(text) {
@@ -77,9 +76,7 @@ function guessDate(text) {
 
 function keywordScore(title) {
   if (!title) return 0;
-  let s = 0;
-  for (const k of KEYWORDS) if (title.includes(k)) s++;
-  return s;
+  let s = 0; for (const k of KEYWORDS) if (title.includes(k)) s++; return s;
 }
 
 async function fetchHtmlAxios(url) {
@@ -101,6 +98,12 @@ function extractItemsFromHtml(html, source) {
   const pushItem = (title, href, ctxText) => {
     title = (title || "").replace(/\s+/g, " ").trim();
     if (!title || title.length < 4 || !href) return;
+    
+    // 🚀 [수정 포인트 2] 추출 시 자바스크립트 링크를 바로 원본 주소로 교체
+    if (href === "#" || href.toLowerCase().includes("javascript")) {
+      href = source.url; 
+    }
+
     items.push({
       source_id: source.id,
       source_name: source.name,
@@ -111,16 +114,16 @@ function extractItemsFromHtml(html, source) {
     });
   };
 
-  // 공통적인 테이블(tr), 리스트(li), 그리드(.item) 구조 모두 탐색
-  $("tr, li, .board-list-item, .item-list").each((_, el) => {
+  // 🚀 [수정 포인트 3] 공공기관에서 자주 쓰는 숨겨진 태그들 추가 탐색
+  $("tr, li, .board-list-item, .item-list, .tbl_list tbody tr, .board_list tbody tr, .el-table__row").each((_, el) => {
     const rowText = $(el).text().replace(/\s+/g, " ").trim();
     const a = $(el).find("a").first();
-    // JavaScript 링크(href="#")인 경우 onclick 속성 추출 시도
+    const onclick = a.attr("onclick");
     let href = a.attr("href");
-    if (href && (href === "#" || href.includes("javascript:"))) {
-      const onclick = a.attr("onclick");
-      if (onclick) href = `javascript:${onclick}`;
-    }
+
+    // href가 비어있고 onclick만 있는 경우
+    if (!href && onclick) href = source.url;
+
     pushItem(a.text(), href, rowText);
   });
 
@@ -145,9 +148,7 @@ async function fetchByBrowser(browser, source) {
   try {
     await page.goto(source.url, { waitUntil: "networkidle2" });
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight / 2));
-    await sleep(2000);
-    // 실제 게시물이 화면에 렌더링될 때까지 대기
-    await page.waitForSelector('tbody tr, ul li a, .board-list a, .item-list a', { timeout: 5000 }).catch(() => {});
+    await sleep(2500); // 렌더링 시간 확보
   } catch {
     try {
       const client = await page.target().createCDPSession();
@@ -172,7 +173,6 @@ async function collectOne(source, browser) {
       const gate = detectGate(html);
       if (gate.gated) {
         result.status = "gated"; result.reason = gate.reason; result.used = "axios";
-        result.evidence_file = saveEvidence(source.id, gate.reason, html);
         return result;
       }
       const items = extractItemsFromHtml(html, source);
@@ -192,21 +192,15 @@ async function collectOne(source, browser) {
       const gate = detectGate(html);
       if (gate.gated) {
         result.status = "gated"; result.reason = gate.reason; result.used = "puppeteer";
-        result.evidence_file = saveEvidence(source.id, gate.reason, html);
         return result;
       }
 
       const items = extractItemsFromHtml(html, source);
       result.items = items; result.count = items.length;
       result.status = result.count > 0 ? "success" : "zero"; result.used = "puppeteer";
-
-      if (result.status === "zero") {
-        result.evidence_file = saveEvidence(source.id, "zero_items", html);
-      }
       return result;
     } catch (e) {
       result.status = "fail"; result.reason = "network_or_timeout"; result.used = "puppeteer_fail";
-      result.evidence_file = saveEvidence(source.id, "network_or_timeout", `ERROR: ${String(e)}`);
       return result;
     }
   }
@@ -216,7 +210,7 @@ async function collectOne(source, browser) {
 }
 
 (async () => {
-  console.log("[수집 시작] 최신 접속 URL로 크롤링 진행 중...");
+  console.log("[수집 시작] 하얀 화면 방지 및 탐색 로직 강화 버전...");
   ensureDir(path.join(process.cwd(), "evidence"));
 
   const browser = await puppeteerExtra.launch({
@@ -245,7 +239,7 @@ async function collectOne(source, browser) {
     } else if (r.status === "zero") {
       console.log(`0건 [${r.used}]`);
     } else {
-      console.log(`실패(${r.reason}) [${r.used}]`);
+      console.log(`실패/차단(${r.reason}) [${r.used}]`);
     }
     await sleep(1500);
   }
