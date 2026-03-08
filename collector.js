@@ -36,7 +36,7 @@ const SOURCES = [
 
 // ===== 튜닝값 =====
 const MAX_ITEMS_PER_SOURCE = 30;
-const SITE_WATCHDOG_MS = 45_000;
+const SITE_WATCHDOG_MS = 60_000; // 45초 -> 60초로 증가
 
 function ensureDir(p) {
   if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
@@ -119,13 +119,22 @@ function keywordScore(title) {
   return s;
 }
 
+// HTTP 헤더 강화 (진짜 브라우저처럼 위장)
 async function fetchHtmlAxios(url) {
   const r = await axios.get(url, {
-    timeout: 15000,
+    timeout: 20000, // 15초 -> 20초로 증가
     headers: {
-      "User-Agent":
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121 Safari/537.36",
-      "Accept-Language": "ko-KR,ko;q=0.9,en;q=0.8",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+      "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
+      "Sec-Ch-Ua": '"Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"',
+      "Sec-Ch-Ua-Mobile": "?0",
+      "Sec-Ch-Ua-Platform": '"Windows"',
+      "Sec-Fetch-Dest": "document",
+      "Sec-Fetch-Mode": "navigate",
+      "Sec-Fetch-Site": "none",
+      "Sec-Fetch-User": "?1",
+      "Upgrade-Insecure-Requests": "1"
     },
   });
   return String(r.data || "");
@@ -176,25 +185,31 @@ function extractItemsFromHtml(html, source) {
   return base.slice(0, MAX_ITEMS_PER_SOURCE);
 }
 
-// (간단) 브라우저 폴백: 페이지 로드 후 HTML로 추출
+// 동적 렌더링 및 로딩 시간 고려 (네트워크 유휴 상태 대기)
 async function fetchByBrowser(browser, source) {
   const page = await browser.newPage();
+  
+  await page.setViewport({ width: 1920, height: 1080 });
   await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121 Safari/537.36"
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
   );
-  page.setDefaultNavigationTimeout(15000);
+  await page.setExtraHTTPHeaders({
+    'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7'
+  });
+  
+  page.setDefaultNavigationTimeout(30000); // 15초 -> 30초 증가
 
   try {
-    await page.goto(source.url, { waitUntil: "domcontentloaded" });
+    // 동적 렌더링을 기다리기 위해 networkidle2 사용
+    await page.goto(source.url, { waitUntil: "networkidle2" });
   } catch {
-    // nav timeout이어도 content는 일부 뜨는 경우가 있어 stopLoading
     try {
       const client = await page.target().createCDPSession();
       await client.send("Page.stopLoading");
     } catch {}
   }
 
-  await sleep(2500);
+  await sleep(3500); // 2.5초 -> 3.5초 증가
   const html = await page.content();
   await page.close();
   return html;
@@ -279,9 +294,16 @@ async function collectOne(source, browser) {
   console.log("[수집 시작] axios → (실패/0건) → puppeteer 폴백 + 워치독");
   ensureDir(path.join(process.cwd(), "evidence"));
 
+  // 자동화 툴 탐지 회피 인자 추가
   const browser = await puppeteerExtra.launch({
-    headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+    headless: "new",
+    args: [
+      "--no-sandbox", 
+      "--disable-setuid-sandbox", 
+      "--disable-dev-shm-usage",
+      "--disable-blink-features=AutomationControlled",
+      "--window-size=1920,1080"
+    ],
   });
 
   const allItems = [];
@@ -317,7 +339,6 @@ async function collectOne(source, browser) {
 
     if (r.status === "success") {
       console.log(`OK (${r.count}) [${r.used}]`);
-      // ✅ 핵심 수정: 문법 오류 제거 + 중첩배열 방지
       allItems.push(...(r.items || []));
     } else if (r.status === "zero") {
       console.log(`0건 [${r.used}]`);
