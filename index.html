@@ -2,80 +2,385 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <title>공고 통합 대시보드</title>
+  <title>공고 통합 대시보드 (15개 기관)</title>
   <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --accent: #1d4ed8;
+      --line: #d9dfeb;
+      --text: #111827;
+      --muted: #6b7280;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: "Malgun Gothic", sans-serif;
-      background: #f6f7fb;
-      padding: 30px;
       margin: 0;
+      font-family: "Malgun Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 28px;
     }
+
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
     h1 {
-      margin-bottom: 20px;
+      margin: 0 0 10px 0;
+      font-size: 34px;
+      font-weight: 800;
     }
+
+    #updateInfo {
+      margin: 0 0 20px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .warn {
+      margin: 0 0 22px 0;
+      padding: 14px 16px;
+      border: 1px solid #f59e0b;
+      background: #fffbeb;
+      border-radius: 12px;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    .source-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .source-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+    }
+
+    .status-success {
+      border-top: 6px solid #22c55e;
+      background: #f0fdf4;
+    }
+
+    .status-zero {
+      border-top: 6px solid #f59e0b;
+      background: #fffbeb;
+    }
+
+    .status-fail {
+      border-top: 6px solid #ef4444;
+      background: #fef2f2;
+    }
+
+    .status-gated {
+      border-top: 6px solid #dc2626;
+      background: #fff1f2;
+    }
+
+    .source-card h4 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      line-height: 1.35;
+      min-height: 38px;
+    }
+
+    .meta {
+      margin-top: 10px;
+      font-size: 11px;
+      line-height: 1.5;
+      color: #374151;
+      word-break: break-word;
+    }
+
+    .btn-open {
+      display: inline-block;
+      font-size: 11px;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      border: 1px solid var(--accent);
+      padding: 5px 9px;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      background: white;
+      background: #fff;
+      min-width: 900px;
     }
-    th, td {
-      padding: 12px;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-    }
+
     th {
-      background: #f0f0f0;
+      background: #f8fafc;
+      padding: 14px;
+      border-bottom: 2px solid var(--line);
+      text-align: left;
+      font-size: 14px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
     }
-    a {
-      color: #333;
+
+    td {
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    .title-cell a {
       text-decoration: none;
+      color: #1f2937;
+      line-height: 1.5;
     }
-    a:hover {
+
+    .title-cell a:hover {
       text-decoration: underline;
+    }
+
+    .is-new {
+      display: inline-block;
+      color: #fff;
+      background: #ef4444;
+      font-weight: 700;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .empty-row td {
+      text-align: center;
+      color: var(--muted);
+      padding: 24px;
     }
   </style>
 </head>
 <body>
-  <h1>공고 통합 대시보드</h1>
+  <div class="wrap">
+    <header>
+      <h1>공고 통합 대시보드 (15개 기관)</h1>
+      <p id="updateInfo">수집 중...</p>
+    </header>
 
-  <table>
-    <thead>
-      <tr>
-        <th>기관</th>
-        <th>공고 제목</th>
-        <th>날짜</th>
-      </tr>
-    </thead>
-    <tbody id="feedBody"></tbody>
-  </table>
+    <div class="warn" id="serverHint" style="display:none;">
+      이 HTML을 파일로 더블클릭(<code>file://</code>)으로 열면 <b>fetch가 차단</b>되어 <code>feed.json</code>을 읽지 못합니다.<br/>
+      로컬 확인이 필요하면 아래 중 하나로 서버를 띄운 뒤 접속하세요.<br/>
+      1) <code>npx http-server -p 5500</code><br/>
+      2) <code>python -m http.server 5500</code><br/>
+      그리고 브라우저에서 <code>http://localhost:5500/index.html</code> 로 접속하면 됩니다.
+    </div>
+
+    <div class="source-grid" id="sourceGrid"></div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th width="220">수집기관</th>
+            <th>공고 제목</th>
+            <th width="120">공고일</th>
+            <th width="120">수집시각</th>
+          </tr>
+        </thead>
+        <tbody id="feedBody"></tbody>
+      </table>
+    </div>
+  </div>
 
   <script>
-    async function load() {
-      const res = await fetch("./feed.json", { cache: "no-store" });
-      if (!res.ok) {
-        throw new Error("feed.json 로드 실패");
-      }
+    const SITES = [
+      { id: "mss_incheon",  name: "인천중소벤처기업청", url: "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=248" },
+      { id: "kosmes",       name: "중소벤처기업진흥공단", url: "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsCategory=01" },
+      { id: "smr",          name: "성남산업진흥원", url: "https://www.smr.or.kr/base/board/list?boardManagementNo=1" },
+      { id: "gmr",          name: "경기상권진흥원", url: "https://www.gmr.or.kr/base/board/list?boardManagementNo=1" },
+      { id: "bizok",        name: "비즈OK(인천)", url: "https://bizok.incheon.go.kr/open_content/biz.do" },
+      { id: "wbiz",         name: "여성기업종합정보포털", url: "https://www.wbiz.or.kr/notice/biz.do" },
+      { id: "semas",        name: "소상공인시장진흥공단", url: "https://www.semas.or.kr/web/board/webBoardList.do?boardId=30" },
+      { id: "insupport",    name: "인천소상공인지원센터", url: "https://www.insupport.or.kr/sub/sub03_02.php" },
+      { id: "nhn_commerce", name: "NHN 커머스", url: "https://www.nhn-commerce.com/support/notice-list.gd" },
+      { id: "gobiz",        name: "고비즈코리아", url: "https://kr.gobizkorea.com/customer/notice/noticeList.do" },
+      { id: "fanfandaero",  name: "판판대로", url: "https://fanfandaero.kr/portal/read/readDetail.do" },
+      { id: "sbiz24",       name: "소상공인24", url: "https://www.sbiz24.kr/#/combinePblanc" },
+      { id: "kodma",        name: "한국소상공인기업총연합회", url: "https://www.kodma.or.kr/bbs/list.do?&bbs_cd=notice" },
+      { id: "ymf_notice",   name: "전통시장육성재단(공지)", url: "https://www.ymf.or.kr/sub/sub03_03.php" },
+      { id: "ymf_related",  name: "전통시장육성재단(유관)", url: "https://www.ymf.or.kr/sub/sub03_05.php" }
+    ];
 
-      const data = await res.json();
-      const items = Array.isArray(data.items) ? data.items : [];
-
-      document.getElementById("feedBody").innerHTML = items.map(i => `
-        <tr>
-          <td>${i.source_name || "-"}</td>
-          <td><a href="${i.url || "#"}" target="_blank">${i.title || "-"}</a></td>
-          <td>${i.notice_date || "-"}</td>
-        </tr>
-      `).join("");
+    function parseDateSafe(s) {
+      if (!s) return null;
+      const d = new Date(s);
+      if (!isFinite(d.getTime())) return null;
+      return d;
     }
 
-    load().catch(err => {
-      console.error(err);
-      document.getElementById("feedBody").innerHTML = `
-        <tr>
-          <td colspan="3">데이터를 불러오지 못했습니다.</td>
-        </tr>
-      `;
-    });
+    function formatDay(s) {
+      const d = parseDateSafe(s);
+      if (!d) return "-";
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, "0");
+      const dd = String(d.getDate()).padStart(2, "0");
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    function formatTimeOnly(s) {
+      const d = parseDateSafe(s);
+      if (!d) return "-";
+      const hh = String(d.getHours()).padStart(2, "0");
+      const mm = String(d.getMinutes()).padStart(2, "0");
+      return `${hh}:${mm}`;
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+    }
+
+    function isNewItem(item, generatedAtIso) {
+      const gen = parseDateSafe(generatedAtIso);
+      const nd = item && item.notice_date ? parseDateSafe(item.notice_date) : null;
+
+      if (gen && nd) {
+        const diff = gen.getTime() - nd.getTime();
+        const days = diff / (1000 * 60 * 60 * 24);
+        return days >= 0 && days <= 7;
+      }
+
+      const ca = item && item.collected_at ? parseDateSafe(item.collected_at) : null;
+      if (gen && ca) {
+        const diff = gen.getTime() - ca.getTime();
+        const hours = diff / (1000 * 60 * 60);
+        return hours >= 0 && hours <= 24;
+      }
+
+      return false;
+    }
+
+    function renderCards(statusMap) {
+      document.getElementById("sourceGrid").innerHTML = SITES.map(site => {
+        const stObj = statusMap[site.id];
+        const st = stObj ? stObj.status : null;
+        const cls = st ? `status-${st}` : "";
+        const count = stObj && typeof stObj.count === "number" ? stObj.count : "-";
+        const reason = stObj && stObj.reason ? stObj.reason : "";
+        const used = stObj && stObj.used ? stObj.used : "";
+
+        const meta = stObj
+          ? `상태: ${escapeHtml(st)} / 건수: ${escapeHtml(count)}${reason ? ` / 사유: ${escapeHtml(reason)}` : ""}${used ? ` / 방식: ${escapeHtml(used)}` : ""}`
+          : "상태: 미수집";
+
+        return `
+          <div class="source-card ${cls}">
+            <h4>${escapeHtml(site.name)}</h4>
+            <a href="${escapeHtml(site.url)}" target="_blank" rel="noopener noreferrer" class="btn-open">원문 열기</a>
+            <div class="meta">${meta}</div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderTable(items, generatedAt) {
+      const tbody = document.getElementById("feedBody");
+
+      if (!Array.isArray(items) || items.length === 0) {
+        tbody.innerHTML = `
+          <tr class="empty-row">
+            <td colspan="4">표시할 공고가 없습니다.</td>
+          </tr>
+        `;
+        return;
+      }
+
+      const sorted = items.slice().sort((a, b) => {
+        const da = parseDateSafe(a.notice_date) || parseDateSafe(a.collected_at) || new Date(0);
+        const db = parseDateSafe(b.notice_date) || parseDateSafe(b.collected_at) || new Date(0);
+        return db.getTime() - da.getTime();
+      });
+
+      tbody.innerHTML = sorted.map(item => {
+        const badge = isNewItem(item, generatedAt) ? `<span class="is-new">NEW</span>` : "";
+        const sourceName = escapeHtml(item.source_name || "-");
+        const title = escapeHtml(item.title || "-");
+        const url = escapeHtml(item.url || "#");
+        const noticeDate = item.notice_date ? formatDay(item.notice_date) : "-";
+        const collectedTime = item.collected_at ? formatTimeOnly(item.collected_at) : "-";
+
+        return `
+          <tr>
+            <td>${sourceName}</td>
+            <td class="title-cell">
+              ${badge}
+              <a href="${url}" target="_blank" rel="noopener noreferrer">${title}</a>
+            </td>
+            <td>${noticeDate}</td>
+            <td>${collectedTime}</td>
+          </tr>
+        `;
+      }).join("");
+    }
+
+    async function load() {
+      try {
+        const res = await fetch("./feed.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("feed.json_fetch_failed");
+
+        const data = await res.json();
+        const statusMap = data.status || {};
+        const generatedAt = data.generated_at || "";
+        const items = Array.isArray(data.items) ? data.items : [];
+
+        renderCards(statusMap);
+        renderTable(items, generatedAt);
+
+        const okCount = items.length;
+        const genDay = generatedAt ? formatDay(generatedAt) : "-";
+        document.getElementById("updateInfo").textContent = `최종 수집일: ${genDay} / 표출 공고: ${okCount}건`;
+      } catch (e) {
+        console.error(e);
+        document.getElementById("updateInfo").textContent =
+          "데이터 로드 실패: 로컬 서버 또는 GitHub Pages에서 열었는지 확인하세요.";
+        document.getElementById("serverHint").style.display = "block";
+        document.getElementById("feedBody").innerHTML = `
+          <tr class="empty-row">
+            <td colspan="4">데이터를 불러오지 못했습니다.</td>
+          </tr>
+        `;
+      }
+    }
+
+    load();
   </script>
 </body>
 </html>
