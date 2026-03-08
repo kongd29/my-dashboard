@@ -15,24 +15,23 @@ const KEYWORDS = [
 ];
 
 // 🚀 [핵심 수정] 15개 기관의 실제 작동하는 최신 URL로 전면 교체
-const SOURCES = [
-  { id: "mss_incheon",  name: "인천중소벤처기업청",       url: "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246", mode: "auto" },
-  { id: "kosmes",       name: "중소벤처기업진흥공단",     url: "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsId=114", mode: "auto" },
-  { id: "smr",          name: "성남산업진흥원",           url: "https://www.snip.or.kr/portal/snip/MainMenu/businessManagement/application.page", mode: "browser" },
-  { id: "gmr",          name: "경기도시장상권진흥원",     url: "https://www.gmr.or.kr/gmr/board/1/board.do", mode: "auto" },
-  { id: "bizok",        name: "비즈오케이(인천)",         url: "https://bizok.incheon.go.kr/open_content/support/application.jsp", mode: "browser" },
-  { id: "wbiz",         name: "여성기업종합정보포털",     url: "https://www.wbiz.or.kr/web/board/boardList.do?boardId=10", mode: "auto" },
-  { id: "semas",        name: "소상공인시장진흥공단",     url: "https://www.semas.or.kr/web/board/webBoardList.do?boardId=30", mode: "auto" },
-  { id: "insupport",    name: "인천소상공인지원센터",     url: "https://www.insupport.or.kr/sub/sub03_02.php", mode: "auto" },
-  { id: "nhn_commerce", name: "NHN커머스",               url: "https://www.nhn-commerce.com/customer-center/notice", mode: "browser" },
-  { id: "gobiz",        name: "고비즈",                   url: "https://kr.gobizkorea.com/customer/notice/noticeList.do", mode: "auto" },
-  { id: "fanfandaero",  name: "판판대로",                 url: "https://fanfandaero.kr/portal/brd/boardList.do?brdId=1", mode: "browser" },
-  { id: "sbiz24",       name: "소상공인24",               url: "https://www.sbiz24.kr/#/combinePblanc", mode: "browser" },
-  { id: "kodma",        name: "한국소상공인기업총연합회", url: "https://www.kodma.or.kr/bbs/list.do?&bbs_cd=notice", mode: "auto" },
-  { id: "ymf_notice",   name: "전통시장육성재단(공지)",   url: "https://www.ymf.or.kr/sub/sub03_03.php", mode: "auto" },
-  { id: "ymf_related",  name: "전통시장육성재단(유관)",   url: "https://www.ymf.or.kr/sub/sub03_05.php", mode: "auto" },
-];
-
+const SITES = [
+      { id: "mss_incheon",  name: "인천중소벤처기업청",       url: "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246" },
+      { id: "kosmes",       name: "중소벤처기업진흥공단",     url: "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsId=114" },
+      { id: "smr",          name: "성남산업진흥원",           url: "https://www.snip.or.kr/portal/snip/MainMenu/businessManagement/application.page" },
+      { id: "gmr",          name: "경기도시장상권진흥원",     url: "https://www.gmr.or.kr/gmr/board/1/board.do" },
+      { id: "bizok",        name: "비즈OK(인천)",             url: "https://bizok.incheon.go.kr/open_content/support/application.jsp" },
+      { id: "wbiz",         name: "여성기업종합정보포털",     url: "https://www.wbiz.or.kr/web/board/boardList.do?boardId=10" },
+      { id: "semas",        name: "소상공인시장진흥공단",     url: "https://www.semas.or.kr/web/board/webBoardList.do?boardId=30" },
+      { id: "insupport",    name: "인천소상공인지원센터",     url: "https://www.insupport.or.kr/sub/sub03_02.php" },
+      { id: "nhn_commerce", name: "NHN 커머스",               url: "https://www.nhn-commerce.com/customer-center/notice" },
+      { id: "gobiz",        name: "고비즈코리아",             url: "https://kr.gobizkorea.com/customer/notice/noticeList.do" },
+      { id: "fanfandaero",  name: "판판대로",                 url: "https://fanfandaero.kr/portal/brd/boardList.do?brdId=1" },
+      { id: "sbiz24",       name: "소상공인24",               url: "https://www.sbiz24.kr/#/combinePblanc" },
+      { id: "kodma",        name: "한국소상공인기업총연합회", url: "https://www.kodma.or.kr/bbs/list.do?&bbs_cd=notice" },
+      { id: "ymf_notice",   name: "전통시장육성재단(공지)",   url: "https://www.ymf.or.kr/sub/sub03_03.php" },
+      { id: "ymf_related",  name: "전통시장육성재단(유관)",   url: "https://www.ymf.or.kr/sub/sub03_05.php" }
+    ];
 const MAX_ITEMS_PER_SOURCE = 30;
 const SITE_WATCHDOG_MS = 60_000;
 
