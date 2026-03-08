@@ -15,28 +15,27 @@ const KEYWORDS = [
   "판로", "마케팅", "컨설팅", "교육", "자금", "융자", "보조", "지원사업"
 ];
 
-// ===== 수집 사이트(HTML의 SITES id와 반드시 동일해야 함) =====
+// ===== 수집 사이트 (동적 사이트는 브라우저 모드 강제 적용) =====
 const SOURCES = [
-  { id: "mss_incheon",  name: "인천중소벤처기업청",           url: "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=248", mode: "auto" },
-  { id: "kosmes",       name: "중소벤처기업진흥공단",         url: "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsCategory=01", mode: "auto" },
-  { id: "smr",          name: "성남상권재단",                 url: "https://www.smr.or.kr/base/board/list?boardManagementNo=1", mode: "auto" },
-  { id: "gmr",          name: "경기도상권진흥원",             url: "https://www.gmr.or.kr/base/board/list?boardManagementNo=1", mode: "auto" },
-  { id: "bizok",        name: "비즈오케이(인천)",             url: "https://bizok.incheon.go.kr/open_content/biz.do", mode: "auto" },
-  { id: "wbiz",         name: "여성기업종합정보포털",         url: "https://www.wbiz.or.kr/notice/biz.do", mode: "auto" },
-  { id: "semas",        name: "소상공인시장진흥공단",         url: "https://www.semas.or.kr/web/board/webBoardList.do?boardId=30", mode: "auto" },
-  { id: "insupport",    name: "인천소상공인지원센터",         url: "https://www.insupport.or.kr/sub/sub03_02.php", mode: "auto" },
-  { id: "nhn_commerce", name: "NHN커머스",                   url: "https://www.nhn-commerce.com/support/notice-list.gd", mode: "auto" },
-  { id: "gobiz",        name: "고비즈",                       url: "https://kr.gobizkorea.com/customer/notice/noticeList.do", mode: "auto" },
-  { id: "fanfandaero",  name: "판판대로",                     url: "https://fanfandaero.kr/portal/read/readDetail.do", mode: "auto" },
-  { id: "sbiz24",       name: "소상공인24",                   url: "https://www.sbiz24.kr/#/combinePblanc", mode: "auto" },
-  { id: "kodma",        name: "한국소상공인기업총연합회",     url: "https://www.kodma.or.kr/bbs/list.do?&bbs_cd=notice", mode: "auto" },
-  { id: "ymf_notice",   name: "전통시장육성재단(공지)",       url: "https://www.ymf.or.kr/sub/sub03_03.php", mode: "auto" },
-  { id: "ymf_related",  name: "전통시장육성재단(유관)",       url: "https://www.ymf.or.kr/sub/sub03_05.php", mode: "auto" },
+  { id: "mss_incheon",  name: "인천중소벤처기업청",       url: "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=248", mode: "auto" },
+  { id: "kosmes",       name: "중소벤처기업진흥공단",     url: "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsCategory=01", mode: "auto" },
+  { id: "smr",          name: "성남상권재단",             url: "https://www.smr.or.kr/base/board/list?boardManagementNo=1", mode: "auto" },
+  { id: "gmr",          name: "경기도상권진흥원",         url: "https://www.gmr.or.kr/base/board/list?boardManagementNo=1", mode: "auto" },
+  { id: "bizok",        name: "비즈오케이(인천)",         url: "https://bizok.incheon.go.kr/open_content/biz.do", mode: "browser" }, // 보안/동적 강제
+  { id: "wbiz",         name: "여성기업종합정보포털",     url: "https://www.wbiz.or.kr/notice/biz.do", mode: "auto" },
+  { id: "semas",        name: "소상공인시장진흥공단",     url: "https://www.semas.or.kr/web/board/webBoardList.do?boardId=30", mode: "auto" },
+  { id: "insupport",    name: "인천소상공인지원센터",     url: "https://www.insupport.or.kr/sub/sub03_02.php", mode: "auto" },
+  { id: "nhn_commerce", name: "NHN커머스",               url: "https://www.nhn-commerce.com/support/notice-list.gd", mode: "auto" },
+  { id: "gobiz",        name: "고비즈",                   url: "https://kr.gobizkorea.com/customer/notice/noticeList.do", mode: "auto" },
+  { id: "fanfandaero",  name: "판판대로",                 url: "https://fanfandaero.kr/portal/read/readDetail.do", mode: "browser" }, // Vue.js 등 동적 렌더링 강제
+  { id: "sbiz24",       name: "소상공인24",               url: "https://www.sbiz24.kr/#/combinePblanc", mode: "browser" }, // Hash SPA 라우팅 강제
+  { id: "kodma",        name: "한국소상공인기업총연합회", url: "https://www.kodma.or.kr/bbs/list.do?&bbs_cd=notice", mode: "auto" },
+  { id: "ymf_notice",   name: "전통시장육성재단(공지)",   url: "https://www.ymf.or.kr/sub/sub03_03.php", mode: "auto" },
+  { id: "ymf_related",  name: "전통시장육성재단(유관)",   url: "https://www.ymf.or.kr/sub/sub03_05.php", mode: "auto" },
 ];
 
-// ===== 튜닝값 =====
 const MAX_ITEMS_PER_SOURCE = 30;
-const SITE_WATCHDOG_MS = 60_000; // 45초 -> 60초로 증가
+const SITE_WATCHDOG_MS = 60_000;
 
 function ensureDir(p) {
   if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
@@ -58,7 +57,6 @@ function saveEvidence(id, reason, content) {
   return file;
 }
 
-// 워치독: 너무 오래 걸리면 timeout으로 끊기
 async function withWatchdog(promise, ms, label) {
   let t;
   const timeoutPromise = new Promise((_, rej) => {
@@ -73,45 +71,24 @@ async function withWatchdog(promise, ms, label) {
 
 function detectGate(html) {
   const h = normalizeForScan(html).toLowerCase();
-
-  const waf =
-    h.includes("/cdn-cgi/") ||
-    h.includes("cf-ray") ||
-    h.includes("cf-chl") ||
-    h.includes("attention required") ||
-    h.includes("cloudflare");
+  const waf = h.includes("/cdn-cgi/") || h.includes("cf-ray") || h.includes("cloudflare");
   if (waf) return { gated: true, reason: "waf_cloudflare" };
-
-  const captchaReal =
-    h.includes("자동입력방지") ||
-    h.includes("보안문자") ||
-    h.includes("g-recaptcha") ||
-    h.includes("h-captcha") ||
-    h.includes('name="captcha"') ||
-    h.includes('id="captcha"') ||
-    h.includes('class="captcha"') ||
-    h.includes("class=\"captcha\"");
+  const captchaReal = h.includes("자동입력방지") || h.includes("보안문자") || h.includes("g-recaptcha") || h.includes('id="captcha"');
   const onlyLib = h.includes("kcaptcha") && !captchaReal;
   if (!onlyLib && captchaReal) return { gated: true, reason: "captcha" };
-
   return { gated: false, reason: null };
 }
 
 function normalizeUrl(baseUrl, href) {
-  try {
-    return new URL(href, baseUrl).toString();
-  } catch {
-    return href;
-  }
+  try { return new URL(href, baseUrl).toString(); } catch { return href; }
 }
+
 function guessDate(text) {
   const m = (text || "").match(/(20\d{2})[.\-/](\d{1,2})[.\-/](\d{1,2})/);
   if (!m) return null;
-  const y = m[1];
-  const mm = String(m[2]).padStart(2, "0");
-  const dd = String(m[3]).padStart(2, "0");
-  return `${y}-${mm}-${dd}`;
+  return `${m[1]}-${String(m[2]).padStart(2, "0")}-${String(m[3]).padStart(2, "0")}`;
 }
+
 function keywordScore(title) {
   if (!title) return 0;
   let s = 0;
@@ -119,21 +96,14 @@ function keywordScore(title) {
   return s;
 }
 
-// HTTP 헤더 강화 (진짜 브라우저처럼 위장)
 async function fetchHtmlAxios(url) {
   const r = await axios.get(url, {
-    timeout: 20000, // 15초 -> 20초로 증가
+    timeout: 20000,
     headers: {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-      "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7",
-      "Sec-Ch-Ua": '"Chromium";v="122", "Not(A:Brand";v="24", "Google Chrome";v="122"',
-      "Sec-Ch-Ua-Mobile": "?0",
-      "Sec-Ch-Ua-Platform": '"Windows"',
-      "Sec-Fetch-Dest": "document",
-      "Sec-Fetch-Mode": "navigate",
-      "Sec-Fetch-Site": "none",
-      "Sec-Fetch-User": "?1",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+      "Accept-Encoding": "gzip, deflate, br",
+      "Accept-Language": "ko-KR,ko;q=0.9,en-US;q=0.8",
       "Upgrade-Insecure-Requests": "1"
     },
   });
@@ -146,9 +116,7 @@ function extractItemsFromHtml(html, source) {
 
   const pushItem = (title, href, ctxText) => {
     title = (title || "").replace(/\s+/g, " ").trim();
-    if (!title || title.length < 4) return;
-    if (!href) return;
-
+    if (!title || title.length < 4 || !href) return;
     items.push({
       source_id: source.id,
       source_name: source.name,
@@ -159,15 +127,9 @@ function extractItemsFromHtml(html, source) {
     });
   };
 
-  $("tr").each((_, tr) => {
-    const rowText = $(tr).text().replace(/\s+/g, " ").trim();
-    const a = $(tr).find("a").first();
-    pushItem(a.text(), a.attr("href"), rowText);
-  });
-
-  $("li").each((_, li) => {
-    const rowText = $(li).text().replace(/\s+/g, " ").trim();
-    const a = $(li).find("a").first();
+  $("tr, li, .board-list-item").each((_, el) => {
+    const rowText = $(el).text().replace(/\s+/g, " ").trim();
+    const a = $(el).find("a").first();
     pushItem(a.text(), a.attr("href"), rowText);
   });
 
@@ -177,31 +139,28 @@ function extractItemsFromHtml(html, source) {
     if (!uniq.has(key)) uniq.set(key, it);
   }
   const arr = Array.from(uniq.values());
-
   const withKw = arr.filter((x) => keywordScore(x.title) > 0);
   const base = withKw.length > 0 ? withKw : arr;
-
   base.sort((a, b) => keywordScore(b.title) - keywordScore(a.title));
   return base.slice(0, MAX_ITEMS_PER_SOURCE);
 }
 
-// 동적 렌더링 및 로딩 시간 고려 (네트워크 유휴 상태 대기)
+// 명시적 요소 대기 및 스크롤 동작이 추가된 브라우저 로직
 async function fetchByBrowser(browser, source) {
   const page = await browser.newPage();
-  
   await page.setViewport({ width: 1920, height: 1080 });
-  await page.setUserAgent(
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-  );
-  await page.setExtraHTTPHeaders({
-    'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7'
-  });
-  
-  page.setDefaultNavigationTimeout(30000); // 15초 -> 30초 증가
+  await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36");
+  page.setDefaultNavigationTimeout(35000);
 
   try {
-    // 동적 렌더링을 기다리기 위해 networkidle2 사용
     await page.goto(source.url, { waitUntil: "networkidle2" });
+    
+    // 지연 로딩 방지용 스크롤
+    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight / 2));
+    await sleep(1000);
+    
+    // 중요: 게시판 항목(a 태그나 tr 태그)이 화면에 뜰 때까지 최대 5초간 대기
+    await page.waitForSelector('tbody tr, ul li a, .board-list a', { timeout: 5000 }).catch(() => {});
   } catch {
     try {
       const client = await page.target().createCDPSession();
@@ -209,22 +168,14 @@ async function fetchByBrowser(browser, source) {
     } catch {}
   }
 
-  await sleep(3500); // 2.5초 -> 3.5초 증가
+  await sleep(3000); // 렌더링 완료 후 혹시 모를 추가 데이터를 위한 여유 대기
   const html = await page.content();
   await page.close();
   return html;
 }
 
 async function collectOne(source, browser) {
-  const result = {
-    status: "unknown",
-    reason: null,
-    evidence_file: null,
-    count: 0,
-    items: [],
-    used: null,
-  };
-
+  const result = { status: "unknown", reason: null, evidence_file: null, count: 0, items: [], used: null };
   const tryAxios = source.mode === "axios" || source.mode === "auto";
   const tryBrowser = source.mode === "browser" || source.mode === "auto";
 
@@ -294,7 +245,6 @@ async function collectOne(source, browser) {
   console.log("[수집 시작] axios → (실패/0건) → puppeteer 폴백 + 워치독");
   ensureDir(path.join(process.cwd(), "evidence"));
 
-  // 자동화 툴 탐지 회피 인자 추가
   const browser = await puppeteerExtra.launch({
     headless: "new",
     args: [
@@ -302,7 +252,8 @@ async function collectOne(source, browser) {
       "--disable-setuid-sandbox", 
       "--disable-dev-shm-usage",
       "--disable-blink-features=AutomationControlled",
-      "--window-size=1920,1080"
+      "--window-size=1920,1080",
+      "--ignore-certificate-errors" // HTTPS 인증서 오류 무시 추가
     ],
   });
 
@@ -327,15 +278,7 @@ async function collectOne(source, browser) {
       };
     }
 
-    status[s.id] = {
-      name: s.name,
-      url: s.url,
-      status: r.status,
-      reason: r.reason,
-      count: r.count,
-      used: r.used,
-      evidence_file: r.evidence_file,
-    };
+    status[s.id] = { name: s.name, url: s.url, status: r.status, reason: r.reason, count: r.count, used: r.used, evidence_file: r.evidence_file };
 
     if (r.status === "success") {
       console.log(`OK (${r.count}) [${r.used}]`);
@@ -347,26 +290,15 @@ async function collectOne(source, browser) {
     } else {
       console.log(`실패(${r.reason}) [${r.used}]`);
     }
-
-    await sleep(1200);
+    await sleep(1500);
   }
 
   await browser.close();
 
   fs.writeFileSync(
     "feed.json",
-    JSON.stringify(
-      {
-        generated_at: new Date().toISOString(),
-        keywords: KEYWORDS,
-        items: allItems,
-        status,
-      },
-      null,
-      2
-    ),
+    JSON.stringify({ generated_at: new Date().toISOString(), keywords: KEYWORDS, items: allItems, status }, null, 2),
     "utf-8"
   );
-
   console.log("\n완료: feed.json 생성됨 / evidence 폴더에 증거 저장됨");
 })();
