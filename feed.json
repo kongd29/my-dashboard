@@ -1,5 +1,5 @@
-  {
-  "generated_at": "2026-03-08T09:45:49.550Z",
+{
+  "generated_at": "2026-04-02T11:13:16.297Z",
   "keywords": [
     "공모",
     "지원",
@@ -23,18 +23,170 @@
     {
       "source_id": "mss_incheon",
       "source_name": "인천중소벤처기업청",
-      "title": "프록시 및 방화벽 확인",
-      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=248#buttons",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:42:35.411Z"
+      "title": "2026년도 중동 특화 긴급 물류바우처 사업 참여기업 모집 공고",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246#view",
+      "notice_date": "2026-03-19",
+      "collected_at": "2026-04-02T11:09:59.047Z"
     },
     {
       "source_id": "mss_incheon",
       "source_name": "인천중소벤처기업청",
-      "title": "Windows 네트워크 진단 프로그램 실행",
-      "url": "javascript:diagnoseErrors()",
+      "title": "2026년 중소벤처기업 지원사업 책자 및 설명회 발표자료 게시",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246#view",
+      "notice_date": "2026-01-15",
+      "collected_at": "2026-04-02T11:09:59.047Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "기업지원/홍보",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:42:35.421Z"
+      "collected_at": "2026-04-02T11:09:59.044Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "기업지원정책",
+      "url": "https://www.smes.go.kr/main/policyInfoSearch",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.044Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "비즈니스 지원단",
+      "url": "https://www.smes.go.kr/bizlink",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.044Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "기업지원/홍보",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246#mGnb-anchor1",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.045Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "2026 기업지원종합서비스 설명회 개최 안내(4.28.화)_ 중부지방고용노동청 공동 주관",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246#view",
+      "notice_date": "2026-04-02",
+      "collected_at": "2026-04-02T11:09:59.046Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "'인천 가정2 B2블록 공공분양주택' 중소기업 장기근속자 주택우선공급 추천대상자 모집공고(~4.6.(월) 18:00)",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246#view",
+      "notice_date": "2026-03-30",
+      "collected_at": "2026-04-02T11:09:59.046Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "(3.25기준 업데이트) 중동 상황 관련 수출기업 지원 메뉴판 게시",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246#view",
+      "notice_date": "2026-03-25",
+      "collected_at": "2026-04-02T11:09:59.047Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "제10회 인천환경공단 공공구매 상담회 참여기업 모집 안내(~3.30(월))",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246#view",
+      "notice_date": "2026-03-06",
+      "collected_at": "2026-04-02T11:09:59.047Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "소상공인시장진흥공단",
+      "url": "http://www.semas.or.kr/web/main/index.kmdc",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.048Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "(재)장애인기업종합지원센터",
+      "url": "http://www.debc.or.kr/",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.048Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "창업진흥원",
+      "url": "http://www.kised.or.kr/",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.048Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "방위사업청",
+      "url": "http://www.dapa.go.kr/",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.049Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "소상공인마당",
+      "url": "https://www.sbiz.or.kr/",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.049Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "중소기업수출지원센터",
+      "url": "https://www.smes.go.kr/exportcenter/",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.049Z"
+    },
+    {
+      "source_id": "mss_incheon",
+      "source_name": "인천중소벤처기업청",
+      "title": "스마트공장사업관리시스템",
+      "url": "http://www.smart-factory.kr/",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:09:59.049Z"
+    },
+    {
+      "source_id": "smr",
+      "source_name": "성남산업진흥원",
+      "title": "이전 페이지",
+      "url": "https://www.snip.or.kr/portal/snip/MainMenu/businessManagement/application.page",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:15.691Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "판로/수출 (No.6833) 접수중 2026년 남동구『중소기업 선택형 온라인 마케팅 지원사업』참여업체 모집 공고 신청기간 : 접수중 26-03-12~26-04-03 주관기관 : 남동구청",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6833",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "컨설팅/특허/인증 (No.6839) 접수중 2026년 항공기업 인증 획득 지원사업 참여기업 모집 공고 신청기간 : 접수중 26-03-16~26-04-03 주관기관 :",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6839",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "기술 (No.6840) 접수중 2026년 인천지역 드론기업 바우처 지원사업 참여기업 모집 공고 신청기간 : 접수중 26-03-16~26-04-03 주관기관 : 인천테크노파크",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6840",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
     },
     {
       "source_id": "bizok",
@@ -42,7 +194,7 @@
       "title": "온라인 기업지원사업신청",
       "url": "https://bizok.incheon.go.kr/open_content/support/application.jsp",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:43:50.338Z"
+      "collected_at": "2026-04-02T11:10:50.818Z"
     },
     {
       "source_id": "bizok",
@@ -50,15 +202,87 @@
       "title": "기업마당 지원사업",
       "url": "https://bizok.incheon.go.kr/open_content/support/business_bizinfo.jsp",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:43:50.338Z"
+      "collected_at": "2026-04-02T11:10:50.818Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "온라인 기업지원사업신청",
+      "url": "https://bizok.incheon.go.kr/",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.818Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "판로/수출 (No.6819) 접수중 스리랑카 콜롬보 소비재 판촉 지원 사업 신청기간 : 접수중 26-03-09~26-04-03 주관기관 : KOTRA",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6819",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "판로/수출 (No.6817) 접수중 인도 뭄바이 식품시장 진출 지원 사업 신청기간 : 접수중 26-03-09~26-04-03 주관기관 : KOTRA",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6817",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "판로/수출 (No.6834) 접수중 「2026년 대만 타이베이 시장개척단」참가업체 모집 신청기간 : 접수중 26-03-12~26-04-03 주관기관 : 인천광역시",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6834",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "판로/수출 (No.6844) 접수중 「2026년 몽골 울란바토르 시장개척단」참가업체 모집 신청기간 : 접수중 26-03-17~26-04-03 주관기관 : 인천광역시",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6844",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "창업/벤처 (No.6857) 접수중 2026년 인천 라이징스타 운영사 모집 공고 신청기간 : 접수중 26-03-23~26-04-06 주관기관 : 인천테크노파크",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6857",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "기술 (No.6873) 접수중 2026년 스마트 안전도시 구축사업 참여기업 모집공고 신청기간 : 접수중 26-03-30~26-04-06 주관기관 : 인천테크노파크",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6873",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "판로/수출 (No.6825) 접수중 2026 한-일(오사카) 소부장 파트너링 플라자 (수출상담회) 수요조사(추가모집) 신청기간 : 접수중 26-03-09~26-04-07 주관기관 :",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6825",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
+    },
+    {
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "판로/수출 (No.6849) 접수중 인천광역시 해외무역사무소(중국) 신규 운영사 모집 공고 신청기간 : 접수중 26-03-18~26-04-07 주관기관 : 인천테크노파크",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6849",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:10:50.820Z"
     },
     {
       "source_id": "bizok",
       "source_name": "비즈오케이(인천)",
       "title": "기업지원",
-      "url": "https://bizok.incheon.go.kr/open_content/biz.do#",
+      "url": "https://bizok.incheon.go.kr/open_content/support/application.jsp",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:43:50.338Z"
+      "collected_at": "2026-04-02T11:10:50.818Z"
     },
     {
       "source_id": "bizok",
@@ -66,7 +290,7 @@
       "title": "연간사업 공고",
       "url": "https://bizok.incheon.go.kr/open_content/support/plan/plan2026.jsp",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:43:50.338Z"
+      "collected_at": "2026-04-02T11:10:50.818Z"
     },
     {
       "source_id": "bizok",
@@ -74,15 +298,15 @@
       "title": "기업지원정보",
       "url": "https://bizok.incheon.go.kr/ibsc/support/business.jsp",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:43:50.338Z"
+      "collected_at": "2026-04-02T11:10:50.818Z"
     },
     {
       "source_id": "bizok",
       "source_name": "비즈오케이(인천)",
       "title": "경영지원",
-      "url": "https://bizok.incheon.go.kr/open_content/biz.do#",
+      "url": "https://bizok.incheon.go.kr/open_content/support/application.jsp",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:43:50.338Z"
+      "collected_at": "2026-04-02T11:10:50.818Z"
     },
     {
       "source_id": "bizok",
@@ -90,7 +314,7 @@
       "title": "중소기업 맞춤형 원스톱지원서비스란?",
       "url": "https://bizok.incheon.go.kr/open_content/bizok/onestop.jsp",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:43:50.339Z"
+      "collected_at": "2026-04-02T11:10:50.818Z"
     },
     {
       "source_id": "bizok",
@@ -98,231 +322,15 @@
       "title": "기업지원 유관기관 안내",
       "url": "https://bizok.incheon.go.kr/open_content/bizok/related.jsp",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:43:50.339Z"
+      "collected_at": "2026-04-02T11:10:50.818Z"
     },
     {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026년 「여성기업 판로역량 강화지원사업」 통합 공고(~2.24)",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-11",
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "지원사업",
-      "url": "https://www.wbiz.or.kr/biz/center.do",
+      "source_id": "bizok",
+      "source_name": "비즈오케이(인천)",
+      "title": "인력 (No.6835) 접수중 2026 청년고용 우수기업 근로환경 개선사업 신청기간 : 접수중 26-03-10~26-04-07 주관기관 : 인천테크노파크",
+      "url": "https://bizok.incheon.go.kr/open_content/support.do?act=detail&policyno=6835",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.073Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "“2026년 여성창업경진대회 사전홍보 및 교육”기획․운영 운영기관 모집 공고",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-19",
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026년 대전광역시 여성기업 사례공유 기반 토론형 마케팅 교육 프로그램 참여자 모집",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-12",
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "자금 여성가장창업자금",
-      "url": "https://www.wbiz.or.kr/biz/funds.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.073Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "컨설팅 여성기업 경영애로지원단",
-      "url": "https://www.wbiz.or.kr/biz/consulting.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.073Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026년 'Fem-Tech(펨테크) 산업 육성 사업' 운영기관 모집 공고(~2026. 3. 9.)",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-12",
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "창업 여성창업보육센터",
-      "url": "https://www.wbiz.or.kr/biz/center.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.073Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "창업 여성창업경진대회",
-      "url": "https://www.wbiz.or.kr/biz/foundation.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.073Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "창업 글로벌 액셀러레이팅",
-      "url": "https://www.wbiz.or.kr/biz/global.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.073Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "판로 여성기업 판로역량강화",
-      "url": "https://www.wbiz.or.kr/biz/market.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.073Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "판로 여우핫딜",
-      "url": "https://wbiz.logishub.net/",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.073Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "교육 여성CEO 비즈니스 아카데미",
-      "url": "https://www.wbiz.or.kr/biz/edu.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.074Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "교육 미래 여성경제인 육성",
-      "url": "https://www.wbiz.or.kr/biz/foster.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.074Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "전자입찰 실무교육",
-      "url": "https://www.wbiz.or.kr/company/edu.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.074Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "사업공고",
-      "url": "https://www.wbiz.or.kr/notice/bizNew.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.074Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "사업신청 내역조회",
-      "url": "https://www.wbiz.or.kr/notice/bizSearch.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.074Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "사업문의",
-      "url": "https://www.wbiz.or.kr/notice/question.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.074Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "창업보육센터 연락처",
-      "url": "https://www.wbiz.or.kr/notice/contact.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.074Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "사업공고",
-      "url": "https://www.wbiz.or.kr/notice/biz.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.076Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026년 제1차 경북센터 신규 BI입주기업 모집 공고 (~3.20)",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-03-05",
-      "collected_at": "2026-03-08T09:44:01.076Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026년 제2차 세종충남센터 BI입주기업 모집 공고(~3월 9일까지)",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-25",
-      "collected_at": "2026-03-08T09:44:01.076Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026년 제주센터 제1차 입주기업 모집 2차 연장 공고(~3.6.)",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-25",
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026년 제1차 대구센터 BI입주기업 모집공고(공고일~3.6)",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-20",
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026년 제1차 경남센터 신규 입주기업 모집 공고(~3.19)",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-20",
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "2026 코리아 나라장터엑스포 참가업체 모집(~02.27)",
-      "url": "javascript:void(0);",
-      "notice_date": "2026-02-13",
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "여성기업종합지원센터",
-      "url": "https://www.wbiz.or.kr/center/greeting.do",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.077Z"
-    },
-    {
-      "source_id": "wbiz",
-      "source_name": "여성기업종합정보포털",
-      "title": "여성기업 경영애로지원단",
-      "url": "http://desk.or.kr/",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:44:01.077Z"
+      "collected_at": "2026-04-02T11:10:50.820Z"
     },
     {
       "source_id": "insupport",
@@ -330,7 +338,15 @@
       "title": "[1:1 문의]",
       "url": "https://customer.gabia.com/ask/onetoone",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:44:15.247Z"
+      "collected_at": "2026-04-02T11:11:09.723Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "전통시장 청년상인 지원사업 ▼",
+      "url": "https://www.ymf.or.kr/sub/sub03_03.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
     },
     {
       "source_id": "ymf_notice",
@@ -338,15 +354,23 @@
       "title": "[종료]2025년 청년몰 마케팅 지원사업 2차 공고",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=66&sk=&sw=&offset=&category=",
       "notice_date": "2025-10-02",
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
       "source_name": "전통시장육성재단(공지)",
-      "title": "전통시장 청년상인 지원사업 ▼",
-      "url": "javascript:;",
+      "title": "지원사업",
+      "url": "https://www.ymf.or.kr/sub/sub02_01.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.114Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "생활 밀착형 지원사업 ▼",
+      "url": "https://www.ymf.or.kr/sub/sub03_03.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
     },
     {
       "source_id": "ymf_notice",
@@ -354,7 +378,7 @@
       "title": "[종료] [전통시장육성재단] 청년상인 AI 활용 역량강화 교육 교육생 모집 안내",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=74&sk=&sw=&offset=&category=",
       "notice_date": "2026-01-02",
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
@@ -362,23 +386,39 @@
       "title": "[종료][전통시장육성재단] 2025년 청년상인 권역별 교육(온라인) 교육생 모집 안내(수...",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=73&sk=&sw=&offset=&category=",
       "notice_date": "2025-12-24",
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
       "source_name": "전통시장육성재단(공지)",
-      "title": "지원사업",
+      "title": "청년상인 교육지원",
       "url": "https://www.ymf.or.kr/sub/sub02_01.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.115Z"
     },
     {
       "source_id": "ymf_notice",
       "source_name": "전통시장육성재단(공지)",
-      "title": "생활 밀착형 지원사업 ▼",
-      "url": "javascript:;",
+      "title": "청년상인 판로지원",
+      "url": "https://www.ymf.or.kr/sub/sub02_03.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.115Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "전통시장 첫걸음 기반조성 사업",
+      "url": "https://www.ymf.or.kr/sub/sub02_06.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "전통시장 디지털 역량강화 사업",
+      "url": "https://www.ymf.or.kr/sub/sub02_08.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
     },
     {
       "source_id": "ymf_notice",
@@ -386,7 +426,7 @@
       "title": "[종료]2026년 전통시장 청년상인 온라인 공동판매전 참여 청년상인 모집 공고",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=72&sk=&sw=&offset=&category=",
       "notice_date": "2025-12-12",
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
@@ -394,7 +434,7 @@
       "title": "[종료] 2025년 청년상인 노하우 특강 교육(6회차) 교육생 모집 공고",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=71&sk=&sw=&offset=&category=",
       "notice_date": "2025-11-21",
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
@@ -402,7 +442,7 @@
       "title": "[종료] 2025년 청년상인 권역별 교육(6회차) 교육생 추가 모집 공고",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=70&sk=&sw=&offset=&category=",
       "notice_date": "2025-11-04",
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
@@ -410,7 +450,7 @@
       "title": "[종료] 2025년 청년상인 노하우 특강 교육(4회차, 5회차) 교육생 모집 공고",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=69&sk=&sw=&offset=&category=",
       "notice_date": "2025-10-20",
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
@@ -418,47 +458,87 @@
       "title": "[종료]2025년 청년상인 노하우 특강 교육(3회차) 교육생 모집 공고(연장)",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=67&sk=&sw=&offset=&category=",
       "notice_date": "2025-10-02",
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
       "source_name": "전통시장육성재단(공지)",
-      "title": "[종료]2025년 청년상인 권역별 교육(5회차) 교육생 추가 모집 공고",
-      "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=65&sk=&sw=&offset=&category=",
-      "notice_date": "2025-10-01",
-      "collected_at": "2026-03-08T09:45:41.514Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "청년상인 교육지원",
-      "url": "https://www.ymf.or.kr/sub/sub02_01.php",
+      "title": "청년상인 도약지원",
+      "url": "https://www.ymf.or.kr/sub/sub02_02.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.115Z"
     },
     {
       "source_id": "ymf_notice",
       "source_name": "전통시장육성재단(공지)",
-      "title": "청년상인 판로지원",
-      "url": "https://www.ymf.or.kr/sub/sub02_03.php",
+      "title": "사업신청",
+      "url": "https://www.ymf.or.kr/sub/sub02_10.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.115Z"
     },
     {
       "source_id": "ymf_notice",
       "source_name": "전통시장육성재단(공지)",
-      "title": "전통시장 첫걸음 기반조성 사업",
-      "url": "https://www.ymf.or.kr/sub/sub02_06.php",
+      "title": "사업정산",
+      "url": "https://www.ymf.or.kr/sub/sub02_11.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.115Z"
     },
     {
       "source_id": "ymf_notice",
       "source_name": "전통시장육성재단(공지)",
-      "title": "전통시장 디지털 역량강화 사업",
-      "url": "https://www.ymf.or.kr/sub/sub02_08.php",
+      "title": "사업문의",
+      "url": "https://www.ymf.or.kr/sub/sub02_12.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
+      "collected_at": "2026-04-02T11:13:12.115Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "사업공고",
+      "url": "https://www.ymf.or.kr/sub/sub03_03.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "타기관 청년지원 공고",
+      "url": "https://www.ymf.or.kr/sub/sub03_11.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "공고 지원하기",
+      "url": "https://www.ymf.or.kr/sub/sub03_09.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "고객지원",
+      "url": "https://www.ymf.or.kr/sub/sub04_01.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "사업문의 및 제안",
+      "url": "https://www.ymf.or.kr/sub/sub04_01.php",
+      "notice_date": null,
+      "collected_at": "2026-04-02T11:13:12.115Z"
+    },
+    {
+      "source_id": "ymf_notice",
+      "source_name": "전통시장육성재단(공지)",
+      "title": "「2026년도 청년몰 활성화 사업」 통합 공고",
+      "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=75&sk=&sw=&offset=&category=",
+      "notice_date": "2026-04-01",
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
@@ -466,79 +546,7 @@
       "title": "[종료]「2025년 청년상인 공동판매전(3차)」모집 공고",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php?boardid=notice3&mode=view&idx=68&sk=&sw=&offset=&category=",
       "notice_date": "2025-10-10",
-      "collected_at": "2026-03-08T09:45:41.514Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "청년상인 도약지원",
-      "url": "https://www.ymf.or.kr/sub/sub02_02.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "사업신청",
-      "url": "https://www.ymf.or.kr/sub/sub02_10.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "사업정산",
-      "url": "https://www.ymf.or.kr/sub/sub02_11.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "사업문의",
-      "url": "https://www.ymf.or.kr/sub/sub02_12.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "사업공고",
-      "url": "https://www.ymf.or.kr/sub/sub03_03.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.514Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "타기관 청년지원 공고",
-      "url": "https://www.ymf.or.kr/sub/sub03_11.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.515Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "공고 지원하기",
-      "url": "https://www.ymf.or.kr/sub/sub03_09.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.515Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "고객지원",
-      "url": "https://www.ymf.or.kr/sub/sub04_01.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.515Z"
-    },
-    {
-      "source_id": "ymf_notice",
-      "source_name": "전통시장육성재단(공지)",
-      "title": "사업문의 및 제안",
-      "url": "https://www.ymf.or.kr/sub/sub04_01.php",
-      "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.515Z"
+      "collected_at": "2026-04-02T11:13:12.116Z"
     },
     {
       "source_id": "ymf_notice",
@@ -546,23 +554,15 @@
       "title": "소상공인시장진흥공단",
       "url": "https://www.semas.or.kr/",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:41.515Z"
+      "collected_at": "2026-04-02T11:13:12.117Z"
     },
     {
       "source_id": "ymf_related",
       "source_name": "전통시장육성재단(유관)",
       "title": "전통시장 청년상인 지원사업 ▼",
-      "url": "javascript:;",
+      "url": "https://www.ymf.or.kr/sub/sub03_05.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
-    },
-    {
-      "source_id": "ymf_related",
-      "source_name": "전통시장육성재단(유관)",
-      "title": "「2026년 디지털전통시장 육성사업(고도화)」 운영인력 모집공고",
-      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=39&sk=&sw=&offset=&category=",
-      "notice_date": "2026-03-05",
-      "collected_at": "2026-03-08T09:45:48.167Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
     },
     {
       "source_id": "ymf_related",
@@ -570,15 +570,31 @@
       "title": "지원사업",
       "url": "https://www.ymf.or.kr/sub/sub02_01.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
     },
     {
       "source_id": "ymf_related",
       "source_name": "전통시장육성재단(유관)",
       "title": "생활 밀착형 지원사업 ▼",
-      "url": "javascript:;",
+      "url": "https://www.ymf.or.kr/sub/sub03_05.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
+    },
+    {
+      "source_id": "ymf_related",
+      "source_name": "전통시장육성재단(유관)",
+      "title": "「2026년 디지털전통시장 육성사업(고도화)」 운영인력 2차 모집공고",
+      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=40&sk=&sw=&offset=&category=",
+      "notice_date": "2026-03-31",
+      "collected_at": "2026-04-02T11:13:14.470Z"
+    },
+    {
+      "source_id": "ymf_related",
+      "source_name": "전통시장육성재단(유관)",
+      "title": "「2026년 디지털전통시장 육성사업(고도화)」 운영인력 모집공고",
+      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=39&sk=&sw=&offset=&category=",
+      "notice_date": "2026-03-05",
+      "collected_at": "2026-04-02T11:13:14.470Z"
     },
     {
       "source_id": "ymf_related",
@@ -586,7 +602,7 @@
       "title": "청년상인 교육지원",
       "url": "https://www.ymf.or.kr/sub/sub02_01.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
     },
     {
       "source_id": "ymf_related",
@@ -594,7 +610,7 @@
       "title": "청년상인 판로지원",
       "url": "https://www.ymf.or.kr/sub/sub02_03.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
     },
     {
       "source_id": "ymf_related",
@@ -602,7 +618,7 @@
       "title": "전통시장 첫걸음 기반조성 사업",
       "url": "https://www.ymf.or.kr/sub/sub02_06.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
     },
     {
       "source_id": "ymf_related",
@@ -610,39 +626,7 @@
       "title": "전통시장 디지털 역량강화 사업",
       "url": "https://www.ymf.or.kr/sub/sub02_08.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
-    },
-    {
-      "source_id": "ymf_related",
-      "source_name": "전통시장육성재단(유관)",
-      "title": "전통시장육성재단 단기계약근로자 채용 공고",
-      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=38&sk=&sw=&offset=&category=",
-      "notice_date": "2025-10-27",
-      "collected_at": "2026-03-08T09:45:48.167Z"
-    },
-    {
-      "source_id": "ymf_related",
-      "source_name": "전통시장육성재단(유관)",
-      "title": "2025년 첫걸음 기반조성사업 시장 PM 6차 채용 공고",
-      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=34&sk=&sw=&offset=&category=",
-      "notice_date": "2025-08-13",
-      "collected_at": "2026-03-08T09:45:48.167Z"
-    },
-    {
-      "source_id": "ymf_related",
-      "source_name": "전통시장육성재단(유관)",
-      "title": "2025년 첫걸음 기반조성사업 시장 PM 5차 채용 공고",
-      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=33&sk=&sw=&offset=&category=",
-      "notice_date": "2025-08-08",
-      "collected_at": "2026-03-08T09:45:48.167Z"
-    },
-    {
-      "source_id": "ymf_related",
-      "source_name": "전통시장육성재단(유관)",
-      "title": "2025년 첫걸음 기반조성사업 시장 PM 4차 채용 공고",
-      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=29&sk=&sw=&offset=&category=",
-      "notice_date": "2025-05-15",
-      "collected_at": "2026-03-08T09:45:48.167Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
     },
     {
       "source_id": "ymf_related",
@@ -650,7 +634,7 @@
       "title": "청년상인 도약지원",
       "url": "https://www.ymf.or.kr/sub/sub02_02.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
     },
     {
       "source_id": "ymf_related",
@@ -658,7 +642,7 @@
       "title": "사업신청",
       "url": "https://www.ymf.or.kr/sub/sub02_10.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.466Z"
     },
     {
       "source_id": "ymf_related",
@@ -666,7 +650,7 @@
       "title": "사업정산",
       "url": "https://www.ymf.or.kr/sub/sub02_11.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.467Z"
     },
     {
       "source_id": "ymf_related",
@@ -674,7 +658,7 @@
       "title": "사업문의",
       "url": "https://www.ymf.or.kr/sub/sub02_12.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.467Z"
     },
     {
       "source_id": "ymf_related",
@@ -682,7 +666,7 @@
       "title": "사업공고",
       "url": "https://www.ymf.or.kr/sub/sub03_03.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.467Z"
     },
     {
       "source_id": "ymf_related",
@@ -690,7 +674,7 @@
       "title": "타기관 청년지원 공고",
       "url": "https://www.ymf.or.kr/sub/sub03_11.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.168Z"
+      "collected_at": "2026-04-02T11:13:14.467Z"
     },
     {
       "source_id": "ymf_related",
@@ -698,7 +682,7 @@
       "title": "공고 지원하기",
       "url": "https://www.ymf.or.kr/sub/sub03_09.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.169Z"
+      "collected_at": "2026-04-02T11:13:14.467Z"
     },
     {
       "source_id": "ymf_related",
@@ -706,7 +690,7 @@
       "title": "고객지원",
       "url": "https://www.ymf.or.kr/sub/sub04_01.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.169Z"
+      "collected_at": "2026-04-02T11:13:14.467Z"
     },
     {
       "source_id": "ymf_related",
@@ -714,7 +698,31 @@
       "title": "사업문의 및 제안",
       "url": "https://www.ymf.or.kr/sub/sub04_01.php",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.169Z"
+      "collected_at": "2026-04-02T11:13:14.468Z"
+    },
+    {
+      "source_id": "ymf_related",
+      "source_name": "전통시장육성재단(유관)",
+      "title": "전통시장육성재단 단기계약근로자 채용 공고",
+      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=38&sk=&sw=&offset=&category=",
+      "notice_date": "2025-10-27",
+      "collected_at": "2026-04-02T11:13:14.470Z"
+    },
+    {
+      "source_id": "ymf_related",
+      "source_name": "전통시장육성재단(유관)",
+      "title": "2025년 첫걸음 기반조성사업 시장 PM 6차 채용 공고",
+      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=34&sk=&sw=&offset=&category=",
+      "notice_date": "2025-08-13",
+      "collected_at": "2026-04-02T11:13:14.470Z"
+    },
+    {
+      "source_id": "ymf_related",
+      "source_name": "전통시장육성재단(유관)",
+      "title": "2025년 첫걸음 기반조성사업 시장 PM 5차 채용 공고",
+      "url": "https://www.ymf.or.kr/sub/sub03_05.php?boardid=notice5&mode=view&idx=33&sk=&sw=&offset=&category=",
+      "notice_date": "2025-08-08",
+      "collected_at": "2026-04-02T11:13:14.470Z"
     },
     {
       "source_id": "ymf_related",
@@ -722,62 +730,62 @@
       "title": "소상공인시장진흥공단",
       "url": "https://www.semas.or.kr/",
       "notice_date": null,
-      "collected_at": "2026-03-08T09:45:48.170Z"
+      "collected_at": "2026-04-02T11:13:14.471Z"
     }
   ],
   "status": {
     "mss_incheon": {
       "name": "인천중소벤처기업청",
-      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=248",
+      "url": "https://www.mss.go.kr/site/incheon/ex/bbs/List.do?cbIdx=246",
       "status": "success",
       "reason": null,
-      "count": 2,
-      "used": "puppeteer",
+      "count": 17,
+      "used": "axios",
       "evidence_file": null
     },
     "kosmes": {
       "name": "중소벤처기업진흥공단",
-      "url": "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsCategory=01",
+      "url": "https://www.kosmes.or.kr/nsh/nt/bbs/getBbsList.do?bbsId=114",
       "status": "zero",
       "reason": null,
       "count": 0,
       "used": "puppeteer",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\kosmes_zero_items_2026-03-08T09-42-39-649Z.html"
+      "evidence_file": null
     },
     "smr": {
-      "name": "성남상권재단",
-      "url": "https://www.smr.or.kr/base/board/list?boardManagementNo=1",
-      "status": "gated",
-      "reason": "waf_cloudflare",
-      "count": 0,
+      "name": "성남산업진흥원",
+      "url": "https://www.snip.or.kr/portal/snip/MainMenu/businessManagement/application.page",
+      "status": "success",
+      "reason": null,
+      "count": 1,
       "used": "puppeteer",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\smr_waf_cloudflare_2026-03-08T09-42-45-133Z.html"
+      "evidence_file": null
     },
     "gmr": {
-      "name": "경기도상권진흥원",
-      "url": "https://www.gmr.or.kr/base/board/list?boardManagementNo=1",
-      "status": "fail",
-      "reason": "watchdog_timeout",
+      "name": "경기도시장상권진흥원",
+      "url": "https://www.gmr.or.kr/gmr/board/1/board.do",
+      "status": "zero",
+      "reason": null,
       "count": 0,
-      "used": "watchdog",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\gmr_watchdog_timeout_2026-03-08T09-43-31-422Z.html"
+      "used": "puppeteer",
+      "evidence_file": null
     },
     "bizok": {
       "name": "비즈오케이(인천)",
-      "url": "https://bizok.incheon.go.kr/open_content/biz.do",
+      "url": "https://bizok.incheon.go.kr/open_content/support/application.jsp",
       "status": "success",
       "reason": null,
-      "count": 8,
+      "count": 21,
       "used": "puppeteer",
       "evidence_file": null
     },
     "wbiz": {
       "name": "여성기업종합정보포털",
-      "url": "https://www.wbiz.or.kr/notice/biz.do",
-      "status": "success",
+      "url": "https://www.wbiz.or.kr/web/board/boardList.do?boardId=10",
+      "status": "zero",
       "reason": null,
-      "count": 28,
-      "used": "axios",
+      "count": 0,
+      "used": "puppeteer",
       "evidence_file": null
     },
     "semas": {
@@ -787,7 +795,7 @@
       "reason": null,
       "count": 0,
       "used": "puppeteer",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\semas_zero_items_2026-03-08T09-44-09-207Z.html"
+      "evidence_file": null
     },
     "insupport": {
       "name": "인천소상공인지원센터",
@@ -800,12 +808,12 @@
     },
     "nhn_commerce": {
       "name": "NHN커머스",
-      "url": "https://www.nhn-commerce.com/support/notice-list.gd",
+      "url": "https://www.nhn-commerce.com/customer-center/notice",
       "status": "zero",
       "reason": null,
       "count": 0,
       "used": "puppeteer",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\nhn_commerce_zero_items_2026-03-08T09-44-24-084Z.html"
+      "evidence_file": null
     },
     "gobiz": {
       "name": "고비즈",
@@ -814,16 +822,16 @@
       "reason": null,
       "count": 0,
       "used": "puppeteer",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\gobiz_zero_items_2026-03-08T09-44-32-214Z.html"
+      "evidence_file": null
     },
     "fanfandaero": {
       "name": "판판대로",
-      "url": "https://fanfandaero.kr/portal/read/readDetail.do",
+      "url": "https://fanfandaero.kr/portal/brd/boardList.do?brdId=1",
       "status": "gated",
       "reason": "waf_cloudflare",
       "count": 0,
       "used": "puppeteer",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\fanfandaero_waf_cloudflare_2026-03-08T09-44-38-593Z.html"
+      "evidence_file": null
     },
     "sbiz24": {
       "name": "소상공인24",
@@ -832,7 +840,7 @@
       "reason": null,
       "count": 0,
       "used": "puppeteer",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\sbiz24_zero_items_2026-03-08T09-44-48-152Z.html"
+      "evidence_file": null
     },
     "kodma": {
       "name": "한국소상공인기업총연합회",
@@ -840,8 +848,7 @@
       "status": "fail",
       "reason": "watchdog_timeout",
       "count": 0,
-      "used": "watchdog",
-      "evidence_file": "C:\\Users\\windows11\\Desktop\\my-dashboard\\evidence\\kodma_watchdog_timeout_2026-03-08T09-45-34-369Z.html"
+      "used": "watchdog"
     },
     "ymf_notice": {
       "name": "전통시장육성재단(공지)",
